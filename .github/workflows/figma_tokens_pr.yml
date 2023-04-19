@@ -1,9 +1,6 @@
-name: Process Tokens From Figma
+name: Process Figma Tokens PR
 
-on:
-  push:
-    branches:
-      - tokens-from-figma
+on: pull_request
 
 jobs:
   run_if: # only if base branch is "tokens-from-figma"
@@ -23,7 +20,7 @@ jobs:
           version: 6.0.2
 
       - name: Install Dependencies
-        run: npm i
+        run: npm i style-dictionary
 
       - name: Build css using Style Dictionary
         run: node sd.config.cjs
@@ -36,11 +33,3 @@ jobs:
           message: "chore: style-dictionary output"
           github_token: ${{ secrets.GITHUB_TOKEN }}
           add: "."
-
-      - name: Create Pull Request
-        uses: repo-sync/pull-request@v2
-        with:
-          destination_branch: "d-tokens" # match your default branch
-          pr_title: "fix: Figma Tokens Update"
-          pr_body: "Design Tokens were updated in Figma. This PR contains the updated Tailwind config and CSS variables."
-          github_token: ${{ secrets.GITHUB_TOKEN }}
