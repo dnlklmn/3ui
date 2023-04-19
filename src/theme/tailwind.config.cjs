@@ -14,6 +14,7 @@ module.exports = {
         background: {
           default: "var(--colors-background-default)",
           system: "var(--colors-background-system)",
+          float: "var(--colors-background-float)",
       "layer_1": "var(--colors-background-layer-1)"
         },
         fill: {
@@ -35,7 +36,7 @@ module.exports = {
           overlay: "var(--colors-fill-overlay)",
           selected: "var(--colors-fill-selected)",
           white: "var(--colors-fill-white)",
-      "impress_1": "var(--colors-fill-impress-1)"
+          separator: "var(--colors-fill-separator)"
         },
         border: {
           contrast: "var(--colors-border-contrast)",
@@ -59,7 +60,8 @@ module.exports = {
         accent: {
           cyan: "var(--colors-accent-cyan)",
           green: "var(--colors-accent-green)",
-          lime: "var(--colors-accent-lime)"
+          lime: "var(--colors-accent-lime)",
+          random: "var(--colors-accent-random)"
         },
         black: "var(--colors-black)",
         white: "var(--colors-white)",

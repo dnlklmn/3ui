@@ -1,13 +1,13 @@
 :root[data-theme="dark"] {
   --colors-background-default: #140523;
   --colors-background-system: #101015;
-  --colors-background-layer-1: #321d47;
+  --colors-background-float: #321d47;
   --colors-fill-primary: #e6007a;
   --colors-fill-primary-hover: color(display-p3 0.74 0.16 0.43);
   --colors-fill-primary-down: color(display-p3 0.7 0.15 0.4);
-  --colors-fill-secondary: #dae0f2;
-  --colors-fill-secondary-hover: color(display-p3 0.87 0.88 0.95);
-  --colors-fill-secondary-down: #dae0f2;
+  --colors-fill-secondary: #f3f5fb;
+  --colors-fill-secondary-hover: color(display-p3 0.96 0.96 0.98);
+  --colors-fill-secondary-down: #f3f5fb;
   --colors-fill-ghost: #321d47;
   --colors-fill-ghost-hover: color(display-p3 0.17 0.11 0.24);
   --colors-fill-ghost-down: #321d47;
@@ -20,12 +20,12 @@
   --colors-fill-overlay: #ffffff94;
   --colors-fill-selected: #e6eaf6;
   --colors-fill-white: #ffffff;
-  --colors-fill-impress-1: #00000008;
+  --colors-fill-separator: #ffffff2b;
   --colors-border-contrast: #201f37;
   --colors-border-dimmed: #00000070;
   --colors-border-primary: #e6007a;
   --colors-border-danger: #e31902;
-  --colors-border-hint: #9d9caf;
+  --colors-border-hint: #ffffff2b;
   --colors-border-disabled: #00000029;
   --colors-border-focus: #201f37;
   --colors-foreground-contrast: #ffffff;
@@ -39,7 +39,8 @@
   --colors-accent-cyan: #00D0FF;
   --colors-accent-green: #56F39A;
   --colors-accent-lime: #D3FF33;
+  --colors-accent-random: #abcabc;
   --box-shadow-pop: 0 8px 24px 0 #00000030;
-  --box-shadow-idle: 0 4px 16px 0 #00000014;
+  --box-shadow-idle: 0 2px 4px 0 rgba(0,0,0,0.85);
   --box-shadow-hover: 0 8px 8px 0 #00000008;
 }
