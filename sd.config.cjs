@@ -1,5 +1,5 @@
 const StyleDictionaryModule = require("style-dictionary");
-const { makeSdTailwindConfig } = require("sd-tailwindcss-transformer");
+const { makeSdTailwindConfig } = require("sd-tw-transformer");
 // const StyleDictionaryPackage = require("style-dictionary");
 const { registerTransforms } = require("@tokens-studio/sd-transforms");
 const StyleDictionary = require("style-dictionary");
@@ -9,15 +9,15 @@ const sdConfig = makeSdTailwindConfig({
   type: "all",
   isVariables: true,
   source: [
-    `src/theme/figma/dark.json`,
-    `src/theme/figma/light.json`,
-    `src/theme/figma/global.json`,
+    `src/input/dark.json`,
+    `src/input/light.json`,
+    `src/input/global.json`,
   ],
   transforms: ["name/cti/kebab", "attribute/cti"],
-  buildPath: `./`,
+  buildPath: `src/theme/`,
   tailwind: {
     content: ["./src/**/*.{js,ts,jsx,tsx}"],
-    plugins: ["forms", "line-clamp"],
+    plugins: ["forms"],
   },
 });
 
@@ -42,8 +42,8 @@ StyleDictionary.registerFormat({
 // generate css for each token set
 ["light", "dark", "typography", "global"].map((theme) => {
   const themeVariables = StyleDictionary.extend({
-    source: [`src/theme/figma/${theme}.json`],
-    include: [`src/theme/figma/global.json`],
+    source: [`src/input/${theme}.json`],
+    include: [`src/input/global.json`],
     platforms: {
       web: {
         transformGroup: "tokens-studio",
@@ -81,8 +81,8 @@ StyleDictionary.registerFormat({
 });
 
 const globalVariables = StyleDictionary.extend({
-  source: [`src/theme/figma/global.json`],
-  include: [`src/theme/figma/global.json`],
+  source: [`src/input/global.json`],
+  include: [`src/input/global.json`],
   platforms: {
     web: {
       transformGroup: "tokens-studio",
