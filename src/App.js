@@ -1,24 +1,13 @@
-import logo from "./logo.svg";
-
-function App() {
+export default function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="h-screen bg-background-default">
+      <div className="p-24">
+        <div className="p-6 rounded-md bg-background-float shadow-idle">
+          <span className="font-semibold font-unbounded text-h5 text-foreground-contrast">
+            Title
+          </span>
+        </div>
+      </div>
     </div>
   );
 }
-
-export default App;
